@@ -3,14 +3,44 @@
 <head>
   <title>WEB 1 - html</title>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="color.js"></script>
 </head>
 
-<body>
-  <h1><a href="https://okall2000.github.io/web1/index.html">WEB</a></h1>
+<body id='target'>
+  <h1><a href="http://localhost:8080/ajax/index.html">WEB</a></h1>
+  <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    ">
+    <!-- <body id='target'>
+    document.querySelector('#target').style.backgroundColor='black';
+    -->
+  <input type="button" value="day" onclick="
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+    ">
+  <!-- input type="button" value="black" onclick="
+      if(document.querySelector('body').dataset.mode == 'day'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('body').dataset.mode='night';
+        this.value= 'day'
+      } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('body').dataset.mode='day';
+        this.value= 'night'
+      }
+    "-->
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+
   <ol>
-    <li><a href="https://okall2000.github.io/web1/1.html">html</a></li>
-    <li><a href="https://okall2000.github.io/web1/2.html">css</a></li>
-    <li><a href="https://okall2000.github.io/web1/3.html">JavaScript</a></li>
+    <li><a href="http://localhost:8080/ajax/1.html">html</a></li>
+    <li><a href="http://localhost:8080/ajax/2.html">css</a></li>
+    <li><a href="http://localhost:8080/ajax/3.html">JavaScript</a></li>
   </ol>
 
   <h1>HTML</h1>
@@ -19,7 +49,7 @@
   <h1>W3C</h1>
   <br>
   <p style="margin-top;40px;"> Test</p>
-  <img src="https://okall2000.github.io/web1/city.jpg" width="100%">
+  <img src="http://localhost:8080/ajax/city.jpg" width="100%">
 
   <parent>
     <child></child>

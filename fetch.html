@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <article>
+
+    </article>
+    <input type="button" value="fetch" onclick="
+    /*
+    fetch('html').then(function(response){ // 익명함수 --then 안에서만 사용하므로 이름이 없다...
+      response.text().then(function(text){
+        alert(text);
+        document.querySelector('article').innerHTML = text;
+      })
+    })
+    // 브라우저 개발자 도구에서 Network 선택하고 ESC 선택하면 Console도 보여준다...
+    */
+    // Asynchronous
+    /*
+    function callbackme(){
+      console.log('response end');
+    }
+    */
+    callbackme =
+    fetch('html').then(function(response){
+      console.log(response.status);
+      if(response.status == '404'){
+        alert('Not Found');
+      }
+    });
+    console.log(1);
+    console.log(2);
+
+
+    ">
+  </body>
+</html>
